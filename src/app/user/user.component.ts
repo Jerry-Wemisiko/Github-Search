@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
-import { User } from '../models/user';
-import { UInterface } from '../interfaces/user';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',

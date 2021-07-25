@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { NavComponent } from './nav/nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavComponent } from './nav/nav.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService,ReposService],
   bootstrap: [AppComponent]

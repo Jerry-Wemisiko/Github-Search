@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RepoInterface } from '../interfaces/repo';
 import { ReposService } from '../services/repos.service';
 
 @Component({
@@ -8,23 +9,16 @@ import { ReposService } from '../services/repos.service';
 })
 export class ReposComponent implements OnInit {
 
-  constructor(repoService:ReposService) { }
+  private searchQuery: string = ''
+  private repoInfo:any
+  
+  constructor(private repoService:ReposService) { }
 
   ngOnInit(): void {
+    this.repoService.getRepos(this.searchQuery)
+    .subscribe((thedata)=> {
+      this.repoInfo = thedata;
+       console.log(thedata)
+    })
   }
-
 }
-// export class UserComponent implements OnInit {
-//   private searchPattern:string ="Jerry-Wemisiko";
-//   private aboutUser:any;
-//   constructor(private userService:UserService) { }
-
-//   ngOnInit(): void {
-//     this.userService.getUsers(this.searchPattern)
-//     .subscribe((results)=> {
-//       this.aboutUser = results;
-//       console.log(results);
-//     });
-//   }
-
-// }
