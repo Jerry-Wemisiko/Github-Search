@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { UserService } from './services/user.service';
 import { ReposService } from './services/repos.service';
+import { SearchuserformComponent } from './searchuserform/searchuserform.component';
 
 
 
@@ -17,6 +18,7 @@ import { ReposService } from './services/repos.service';
     AppComponent,
     UserComponent,
     ReposComponent,
+    SearchuserformComponent,
   ],
   imports: [
     BrowserModule,
