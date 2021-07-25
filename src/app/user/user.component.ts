@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output } from '@angular/core';
+import { User } from '../models/user';
 import { UserService } from '../services/user.service';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-user',
@@ -8,6 +8,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  @Input() user :any;
+ 
+
   private searchPattern:string ="Jerry-Wemisiko";
   private aboutUser:any;
   constructor(private userService:UserService) { }
