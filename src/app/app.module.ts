@@ -7,12 +7,14 @@ import { ReposService } from './services/repos.service';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    ReposComponent
+    ReposComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
