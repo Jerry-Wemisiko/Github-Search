@@ -8,11 +8,12 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input() user :any;
+  
+  // @Input() user :any;
  
 
   private searchPattern:string ="Jerry-Wemisiko";
-  private aboutUser:any;
+  private aboutUser:User;
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {

@@ -9,8 +9,7 @@ import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { UserService } from './services/user.service';
 import { ReposService } from './services/repos.service';
-import { SearchuserformComponent } from './searchuserform/searchuserform.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,13 +17,14 @@ import { SearchuserformComponent } from './searchuserform/searchuserform.compone
     AppComponent,
     UserComponent,
     ReposComponent,
-    SearchuserformComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule,
+    FormsModule
   
   ],
   providers: [UserService,ReposService],
