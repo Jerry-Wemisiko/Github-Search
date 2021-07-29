@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  githubAccessKey: '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'
-
-  
+    
 };
 
 /*

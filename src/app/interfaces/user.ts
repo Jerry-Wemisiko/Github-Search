@@ -3,4 +3,5 @@ export interface UInterface{
     bio:string;
     created_at:string;
     repos_url:string
+
 }
