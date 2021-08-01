@@ -1,11 +1,13 @@
-.card{
-    text-align: center;
-    background-color: brown;
-    height :200px;
-    border-radius:10px
-   
+.card {
+  display: flex;
+  text-align: center;
+  /* background-color: #5b78c7; */
 }
- #button{
-     background-color: blue;
-     border-radius: 5px;
- }
+#button {
+  border-radius: 5px;
+  background-color: #5b78c7;
+}
+#repos,
+#user {
+  text-align: center;
+}

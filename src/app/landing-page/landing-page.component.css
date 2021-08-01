@@ -1,3 +1,21 @@
+* {
+  box-sizing: border-box;
+}
 nav {
-  background-color: brown;
+  background-color: #5b78c7;
+  height: 12vh;
+}
+
+.nav-links {
+  display: flex;
+  height: 100%;
+}
+.nav-item {
+  list-style: none;
+}
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
 }
