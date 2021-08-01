@@ -13,6 +13,7 @@ import { SearchformComponent } from './searchform/searchform.component';
 import { RoutingModule, routingComponents } from './routing/routing.module';
 import { SearchHttpRequestService } from './searchhttprequest.service';
 import { HighlightDirective } from './highlight.directive';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HighlightDirective } from './highlight.directive';
     LandingPageComponent,
     routingComponents,
     HighlightDirective,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
