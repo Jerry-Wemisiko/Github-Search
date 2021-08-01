@@ -3,7 +3,7 @@
 
 
 
-/dist
+dist/
 /tmp
 /out-tsc
 /environments/environment.ts
@@ -46,3 +46,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Local Netlify folder
+.netlify
