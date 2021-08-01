@@ -6,14 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
-// import { UserService } from './services/user.service';
-// import { ReposService } from './services/repos.service';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SearchformComponent } from './searchform/searchform.component';
 import { RoutingModule, routingComponents } from './routing/routing.module';
 import { SearchHttpRequestService } from './searchhttprequest.service';
+import { HighlightDirective } from './highlight.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { SearchHttpRequestService } from './searchhttprequest.service';
     SearchformComponent,
     LandingPageComponent,
     routingComponents,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

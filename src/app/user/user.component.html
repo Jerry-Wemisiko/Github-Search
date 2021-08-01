@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="row">
     <div class="col-md-12">
       <app-searchform (findUser)="getUser($event)"></app-searchform>
@@ -12,11 +11,9 @@
         <table class="table table-striped table-light">
           <tbody>
             <tr>
-              <th scope="row">Github Username:</th>
+              <th scope="row">Github Username</th>
               <td>
-                <a href="{{ users.html_url }}" target="_blank">{{
-                  users.login
-                  }}</a>
+                <a href="{{ users.html_url }}" target="_blank">{{users.login}}</a>
               </td>
             </tr>
             <tr>
@@ -41,19 +38,21 @@
   </div>
   <hr />
 </div>
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2 style="color: #056b5b">User Repositories</h2>
+      <h2>User Repositories</h2>
       <div class="table table-striped">
         <table class="table">
           <tbody>
             <tr *ngFor='let repo of userRepos.newRepo'>
               <td>
-                <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+                <a href="{{repo.html_url}}" target="_blank">{{repo.name | uppercase}}</a>
 
                 <br>
-                <p class="desc">Description: {{repo.description}}</p>
+                <p>Description: {{repo.description}}</p>
               </td>
             </tr>
           </tbody>

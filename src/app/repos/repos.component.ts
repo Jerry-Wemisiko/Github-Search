@@ -16,6 +16,7 @@ export class ReposComponent implements OnInit {
   searchRepos() {
     this.searchQuery = '';
     this.resultCount = 20;
+    this.getData();
   }
 
   constructor(public repoService: SearchHttpRequestService) {}
