@@ -1,5 +1,5 @@
 # GithubSearch
-
+A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
@@ -10,8 +10,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Tecnologies Used
+Angular
+Typescript
+Github
+Bootstrap
 
+## Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
