@@ -1,0 +1,11 @@
+.card{
+    text-align: center;
+    background-color: brown;
+    height :200px;
+    border-radius:10px
+   
+}
+ #button{
+     background-color: blue;
+     border-radius: 5px;
+ }

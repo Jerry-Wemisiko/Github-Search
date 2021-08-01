@@ -1,24 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { RepoInterface } from '../interfaces/repo';
-import { ReposService } from '../services/repos.service';
+import { Repos } from '../models/repos';
+import { SearchHttpRequestService } from '../searchhttprequest.service';
+import { SearchformComponent } from '../searchform/searchform.component';
 
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.css']
+  styleUrls: ['./repos.component.css'],
 })
 export class ReposComponent implements OnInit {
+  repo: Repos;
+  public searchQuery: string;
+  public resultCount = 30;
 
-  private searchQuery: string = ''
-  private repoInfo:any
-  
-  constructor(private repoService:ReposService) { }
+  searchRepos() {
+    this.searchQuery = '';
+    this.resultCount = 20;
+  }
 
-  ngOnInit(): void {
-    this.repoService.getRepos(this.searchQuery)
-    .subscribe((thedata)=> {
-      this.repoInfo = thedata;
-       console.log(thedata)
-    })
+  constructor(public repoService: SearchHttpRequestService) {}
+
+  ngOnInit() {
+    this.repoService.getRepos(this.searchQuery);
+    console.log(this.repoService);
+  }
+
+  getData() {
+    this.repoService.getRepos(this.searchQuery);
   }
 }

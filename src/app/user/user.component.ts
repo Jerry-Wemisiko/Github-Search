@@ -1,26 +1,43 @@
-import { Component, OnInit,Input,Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Repos } from '../models/repos';
 import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { SearchHttpRequestService } from '../searchhttprequest.service';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  providers: [SearchHttpRequestService],
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  @Input() user :any;
- 
+  public searchPattern: string = 'Jerry-Wemisiko';
+  public aboutUser: string;
 
-  private searchPattern:string ="Jerry-Wemisiko";
-  private aboutUser:any;
-  constructor(private userService:UserService) { }
+  users: User;
+  repo: Repos;
+  public searchRepo: string;
+  public resultCount = 20;
 
-  ngOnInit(): void {
-    this.userService.getUsers(this.searchPattern)
-    .subscribe((results)=> {
-      this.aboutUser = results;
-      console.log(results);
-    });
+  getUser(username: any) {
+    this.aboutUser = '';
+    this.searchPattern = username;
+    this.ngOnInit();
   }
 
+  constructor(
+    public userService: SearchHttpRequestService,
+    public userRepos: SearchHttpRequestService
+  ) {}
+
+  ngOnInit() {
+    this.userService.aboutUser(this.searchPattern);
+    this.users = this.userService.users;
+    this.userRepos.getUserRepos(this.searchPattern);
+    console.log(this.userRepos);
+  }
+
+  searchRepos() {
+    this.searchRepo = '';
+    this.resultCount = 10;
+  }
 }

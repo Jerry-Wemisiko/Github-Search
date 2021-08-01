@@ -1,5 +1,11 @@
-<form>
-    <input type="text" placeholder="Enter your username">
-    <button type="click" >Search</button>
-  
-</form>
+<div class="container">
+    <form (ngSubmit)="searchInfo()" #searchForm="ngForm">
+        <div class="form-group">
+            <input class="form-control" type="search" id="search" placeholder="Enter your username"
+                [(ngModel)]="searchedUser" name="searchedUser" #name="ngModel" required />
+        </div>
+        <div class="form-group">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+</div>
