@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { User } from '../models/user';
+import { Search } from '../search';
 
 @Component({
   selector: 'app-searchform',
@@ -7,15 +7,16 @@ import { User } from '../models/user';
   styleUrls: ['./searchform.component.css'],
 })
 export class SearchformComponent implements OnInit {
-  // newUser = new User();
-  searchedUser: string;
-  @Output() findUser = new EventEmitter<any>();
+  searchedString = new Search('');
+  @Output() findUser = new EventEmitter<Search>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  searchInfo() {
-    this.findUser.emit(this.searchedUser);
+  searchInfo(info: any) {
+    this.findUser.emit(info.value.track);
+    console.log(info.value.track);
+    info.reset();
   }
 }
