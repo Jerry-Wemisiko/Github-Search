@@ -6,16 +6,17 @@ nav {
   height: 12vh;
 }
 
-.nav-links {
+.navlinks {
+  margin-top: 10px;
   display: flex;
   height: 100%;
+  font-size: larger;
 }
 .nav-item {
   list-style: none;
 }
-.nav-links li a {
+.navlinks li a {
   color: #000;
   text-decoration: none;
-  font-size: 18px;
-  display: flex;
+  font-size: 20px;
 }

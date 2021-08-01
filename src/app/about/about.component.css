@@ -1,0 +1,14 @@
+.crd {
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  border: 3px black;
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  border-radius: 10px;
+  margin-left: 40%;
+}
+#info {
+  margin-top: 10px !important;
+}
